@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.name {
+    text-decoration: none;
+    font-size: 2rem;
+    letter-spacing: 0.01em;
+    color: rgb(0, 0, 0);
+    position: absolute;
+    left: 30px;
+    top: 30px;
+}
+
+.name:hover{
+    color: blue;
+}
+
+.fa-bars{
+    pointer-events: none;
+    color: white;
+    position: absolute;
+    right: 10%;
+    top: 45px;
+    font-size: 2rem;
+}
+
+.fa-times{
+    pointer-events: none;
+    color: white;
+    position: absolute;
+    right: 10%;
+    top: 45px;
+    font-size: 2rem;
+}
+
+.fa:hover {
+    color: blue;
+    cursor: pointer;
+}
+
+main {
+    width: 40%;
+    margin: 0 auto;
+}
+
+.full-width {
+    z-index: 100;
+    margin-top: 120px;;
+    margin-left: -65%;
+    margin-right: -25%;
+}
+
+.full-width ul{
+    list-style-type: none;
+}
+.full-width ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    margin: 10px;
+}
+.full-width ul li a:hover{
+    color: blue;
+}
+
+.full-width ul li a{
+    text-decoration: none;
+    font-size: 160%;
+    margin-left: 5%;
+    /* margin: 5%; */
+    /* padding: 5%; */
+    line-height: 200%;
+    color: black;
+}
+.full-width h1 i{
+    font-size: 170%;
+    line-height: 200%;
+}
+
+.content{
+    width: 70%;
+    position: absolute;
+    top: 110px;
+
+    right: 5%;    font-size: xx-large;
+}
+
+.topic{
+    font-size: 40px;
+    color: black;
+}
+
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 105px;
+}
+
+.inp {
+    align-items: center;
+    flex-basis: 18%;
+    box-sizing: border-box;
+    margin-bottom: 5%;
+    height: 30px;
+}
+
+#button{
+    font-size: 20px;
+    background-color: white;
+}
+#button:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+.res {
+    font-size: xx-large;
+    display: none;
+    margin-top: 40px;
+    text-align: center;
+    align-items: center;
+}
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.footer h4{
+    margin: 20px 0 25px 0;
+    font-weight: 600;
+}
+.see-more:hover{
+    color: blue;
+}
+.see-less:hover{
+    color: blue;
+}
+canvas{
+    border: 1px solid black;
+    background-color: rgba(0, 128, 0, 0.1);
+    margin-bottom: 5%;
+}

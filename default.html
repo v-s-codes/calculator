@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="with=device-width, initial-scale=1.0">
+        <title>Calculator</title>
+        <link rel="stylesheet" media="screen and (min-width: 701px)" href="styles.css">
+        <link rel="stylesheet" media="screen and (max-width: 700px)" href="style_small.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+        <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+        <script src="demo.js"> </script>
+    </head>
+
+    <body>
+        <section class="header">
+            <nav>
+                <a href="default.html" class="name">Calculator</a>
+                <i class="fa fa-bars"  onclick="barsClicked()" aria-hidden="true"></i>
+                <i class="fa fa-times" onclick="timesClicked()" aria-hidden="true"></i>
+
+            </nav>
+            
+        
+
+        <!-- parent -->
+        <main>
+            <!-- container we want to be full width -->
+            <figure class="full-width">
+                <!-- could be whatever content -->
+                <h1>
+                    <i >General</i>
+                    <i class="fa fa-plus-square-o" onclick="moreClicked(0)" aria-hidden="true"></i>
+                    <i class="fa fa-minus-square-o" style="display: none;" onclick="lessClicked(0)" aria-hidden="true"></i> 
+                    
+                </h1>
+                <ul style="display: none;" class="general">
+                    <li><a href="arithmetic.html">    Simple Arithmetic</a></li>
+                    <li><a href="unit.html">    Unit Conversions</a></li>
+                </ul>
+                <br> 
+                <h1>
+                    <i >Mathematics</i>
+                    <i class="fa fa-plus-square-o"  onclick="moreClicked(1)" aria-hidden="true"></i>
+                    <i class="fa fa-minus-square-o" style="display: none;" onclick="lessClicked(1)" aria-hidden="true"></i> 
+                    
+                </h1>
+                <ul style="display: none;" class="mathematics">
+                    <li><a href="shapes.html">  Geometry</a></li>
+                    <li><a href="trig.html">    Trigonometry</a></li>
+                    <li><a href="#">    Bitwise Operations</a></li>
+                </ul>
+                <br>
+                <h1>
+                    <i >Physics</i>
+                    <i class="fa fa-plus-square-o"  onclick="moreClicked(2)" aria-hidden="true"></i>
+                    <i class="fa fa-minus-square-o" style="display: none;" onclick="lessClicked(2)" aria-hidden="true"></i> 
+                    
+                </h1>
+                <ul style="display: none;" class="physics">
+                    <li><a href="#">    Motion</a></li>
+                </ul>
+                <br>
+                <h1>
+                    <i >Chemistry</i>
+                    <i class="fa fa-plus-square-o"  onclick="moreClicked(3)" aria-hidden="true"></i>
+                    <i class="fa fa-minus-square-o" style="display: none;" onclick="lessClicked(3)" aria-hidden="true"></i> 
+                    
+                </h1>
+                <ul style="display: none;" class="chemistry">
+                    <li><a href="#">    Something</a></li>
+                </ul>
+            </figure>
+            <section class="content">
+                <h1>Blogs</h1>
+                <h5 style="margin-left: 5%; margin-top: 5%;">User-1</h5>
+                <p style="margin-left: 9%; margin-top: 13%px; margin-bottom: 9%;">Morbi pretium blandit enim sed maximus. Maecenas imperdiet ultrices dapibus. Donec eu ligula nec leo rutrum suscipit. Donec laoreet, mi vel malesuada<code onclick="seeMore(0)" class="see-more" style="cursor: pointer;">...see more</code>  <span style="display: none;" class="remaining">interdum, neque sapien elementum nisl, id egestas mauris ipsum id lorem. Nullam ante eros, pulvinar eu aliquam id, condimentum at quam. Praesent scelerisque est arcu, at tristique lacus sagittis at. Cras sit amet pharetra lacus. In arcu erat, imperdiet sit amet dictum in, ullamcorper id diam. Morbi ut turpis venenatis dui aliquet porttitor. Donec aliquet eu tortor id viverra. Aenean ac sem dui. Vestibulum interdum mi nec metus finibus, nec tincidunt diam ornare. Integer bibendum consequat luctus. In facilisis rutrum placerat. Nullam et mattis lacus.  </span> <code onclick="seeLess(0)" style="display: none; cursor: pointer;" class="see-less">see less</code>  </p>  
+           
+                <h5 style="margin-left: 5%; margin-top: 5%;">User-2</h5>
+                <p style="margin-left: 9%; margin-top: 13%px; margin-bottom: 9%;">Quisque at urna sed nisi scelerisque varius. Sed volutpat ligula in elit cursus molestie. Praesent ultricies, ante et vestibulum scelerisque, erat mau<code onclick="seeMore(1)" class="see-more" style="cursor: pointer;">...see more</code>  <span style="display: none;" class="remaining">ris imperdiet arcu, vel ornare lorem leo ac justo. Mauris dictum luctus felis sit amet suscipit. Donec condimentum neque sed eleifend cursus. Sed dignissim nunc aliquet justo semper, at dapibus nulla placerat. Maecenas id elit finibus, pretium enim et, pretium massa. Integer in bibendum lacus, eu suscipit nulla. In luctus, velit ut sodales ullamcorper, libero dui vestibulum metus, quis imperdiet quam lectus nec lorem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc posuere ipsum id rutrum suscipit. Praesent tristique iaculis tortor ac efficitur.</span> <code onclick="seeLess(1)" style="display: none; cursor: pointer; " class="see-less">see less</code> </p>
+            </section>
+
+
+        
+        </main>
+
+    </section>
+    
+        
+    </body>
+</html>
+

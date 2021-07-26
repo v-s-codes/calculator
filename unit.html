@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="with=device-width, initial-scale=1.0">
+        <title>Simple Arithmetic</title>
+        <link rel="stylesheet" media="screen and (min-width: 701px)" href="styles.css">
+        <link rel="stylesheet" media="screen and (max-width: 700px)" href="style_small.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+        <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+        <script src="demo.js"> </script> 
+    </head>
+
+    <body>
+        <section class="header">
+            <nav>
+                <a href="default.html" class="name">Home</a>
+                <i class="fa fa-bars"  onclick="barsClicked()"  aria-hidden="true"></i>
+                <i class="fa fa-times" onclick="timesClicked()" aria-hidden="true"></i>
+            </nav>
+            
+        
+
+        <!-- parent -->
+        <main>
+            <!-- container we want to be full width -->
+            <figure class="full-width">
+                <!-- could be whatever content -->
+                <h1>
+                    <i >General</i>
+                    <i class="fa fa-plus-square-o" onclick="moreClicked(0)" aria-hidden="true"></i>
+                    <i class="fa fa-minus-square-o" style="display: none;" onclick="lessClicked(0)" aria-hidden="true"></i> 
+                    
+                </h1>
+                <ul style="display: none;" class="general">
+                    <li><a href="arithmetic.html">    Simple Arithmetic</a></li>
+                    <li><a href="unit.html">    Unit Conversions</a></li>
+                </ul>
+                <br> 
+                <h1>
+                    <i >Mathematics</i>
+                    <i class="fa fa-plus-square-o"  onclick="moreClicked(1)" aria-hidden="true"></i>
+                    <i class="fa fa-minus-square-o" style="display: none;" onclick="lessClicked(1)" aria-hidden="true"></i> 
+                    
+                </h1>
+                <ul style="display: none;" class="mathematics">
+                    <li><a href="shapes.html">    Geometry</a></li>
+                    <li><a href="trig.html">    Trigonometry</a></li>
+                    <li><a href="#">    Bitwise Operations</a></li>
+                </ul>
+                <br>
+                <h1>
+                    <i >Physics</i>
+                    <i class="fa fa-plus-square-o"  onclick="moreClicked(2)" aria-hidden="true"></i>
+                    <i class="fa fa-minus-square-o" style="display: none;" onclick="lessClicked(2)" aria-hidden="true"></i> 
+                    
+                </h1>
+                <ul style="display: none;" class="physics">
+                    <li><a href="#">    Motion</a></li>
+                </ul>
+                <br>
+                <h1>
+                    <i >Chemistry</i>
+                    <i class="fa fa-plus-square-o"  onclick="moreClicked(3)" aria-hidden="true"></i>
+                    <i class="fa fa-minus-square-o" style="display: none;" onclick="lessClicked(3)" aria-hidden="true"></i> 
+                    
+                </h1>
+                <ul style="display: none;" class="chemistry">
+                    <li><a href="#">    Something</a></li>
+                </ul>
+            </figure>
+            
+            <div class="content">
+                <code class="topic">Length</code>
+                <form class="row">
+                    <input type="number" step="0.000000000000000001" required class="inp place" placeholder="Enter the value in first unit">
+    
+                    <select name="operator" class="inp" required>
+                        <option value="" selected="true" disabled="disabled">Select first unit</option>
+                        <option value="1">Angstrom</option>
+                        <option value="2">CentiMeter</option>
+                        <option value="3">DecaMeter</option>
+                        <option value="4">DeciMeter</option>
+                        <option value="5">FemtoMetre</option>
+                        <option value="6">Foot</option>
+                        <option value="7">GigaMetre</option>
+                        <option value="8">HectoMeter</option>
+                        <option value="9">Inch</option>
+                        <option value="10">Kilometer</option>
+                        <option value="11">LightYear</option>
+                        <option value="12">MegaMeter</option>
+                        <option value="13">Meter</option>
+                        <option value="14">MicroMeter</option>
+                        <option value="15">MiliMeter</option>
+                        <option value="16">Parsec</option>
+                        <option value="17">PicoMeter</option>
+                    </select>
+    
+                    <select name="operator" class="inp" required>
+                        <option value="" selected="true" disabled="disabled">Select second unit</option>
+                        <option value="1">Angstrom</option>
+                        <option value="2">CentiMeter</option>
+                        <option value="3">DecaMeter</option>
+                        <option value="4">DeciMeter</option>
+                        <option value="5">FemtoMetre</option>
+                        <option value="6">Foot</option>
+                        <option value="7">GigaMetre</option>
+                        <option value="8">HectoMeter</option>
+                        <option value="9">Inch</option>
+                        <option value="10">Kilometer</option>
+                        <option value="11">LightYear</option>
+                        <option value="12">MegaMeter</option>
+                        <option value="13">Meter</option>
+                        <option value="14">MicroMeter</option>
+                        <option value="15">MiliMeter</option>
+                        <option value="16">Parsec</option>
+                        <option value="17">PicoMeter</option>
+                    </select>
+    
+                    <input id="button" type="button" value="Get Value in the Second Unit" class="inp" onclick="conversion(1)">
+                </form>
+                <code class="res">Result</code>
+                <hr>
+                
+                <code class="topic">Mass</code>
+                <form class="row">
+                    <input type="number" step="0.000000000000000001" required class="inp place" placeholder="Enter the value in first unit">
+    
+                    <select name="operator" class="inp" required>
+                        <option value="" selected="true" disabled="disabled">Select first unit</option>
+                        <option value="1">Carat</option>
+                        <option value="2">Grain</option>
+                        <option value="3">Gram</option>
+                        <option value="4">KiloGram</option>
+                        <option value="5">MicroGram</option>
+                        <option value="6">MiliGram</option>
+                        <option value="7">Ounce</option>
+                        <option value="8">Pound</option>
+                        <option value="9">Quintal</option>
+                        <option value="10">Stone</option>
+                        <option value="11">Tonne</option>
+                        <option value="12">US-Ton</option>
+                    </select>
+    
+                    <select name="operator" class="inp" required>
+                        <option value="" selected="true" disabled="disabled">Select second unit</option>
+                        <option value="1">Carat</option>
+                        <option value="2">Grain</option>
+                        <option value="3">Gram</option>
+                        <option value="4">KiloGram</option>
+                        <option value="5">MicroGram</option>
+                        <option value="6">MiliGram</option>
+                        <option value="7">Ounce</option>
+                        <option value="8">Pound</option>
+                        <option value="9">Quintal</option>
+                        <option value="10">Stone</option>
+                        <option value="11">Tonne</option>
+                        <option value="12">US-Ton</option>
+                    </select>
+    
+                    <input id="button" type="button" value="Get Value in the Second Unit" class="inp" onclick="conversion(2)">
+                </form>
+                <code class="res">Result</code>
+                <hr>
+                
+                <code class="topic">Currency</code>
+                <form class="row">
+                    <input type="number" step="0.000000000000000001" required class="inp place" placeholder="Amount in first currency">
+    
+                    <select name="operator" class="inp" required>
+                        <option value="" selected="true" disabled="disabled">Select first currency</option>
+                        <option value="AED">AED</option>
+                        <option value="ARS">ARS</option>
+                        <option value="AUD">AUD</option>
+                        <option value="BGN">BGN</option>
+                        <option value="BRL">BRL</option>
+                        <option value="BSD">BSD</option>
+                        <option value="CAD">CAD</option>
+                        <option value="CHF">CHF</option>
+                        <option value="CLP">CLP</option>
+                        <option value="CNY">CNY</option>
+                        <option value="COP">COP</option>
+                        <option value="CZK">CZK</option>
+                        <option value="DKK">DKK</option>
+                        <option value="DOP">DOP</option>
+                        <option value="EGP">EGP</option>
+                        <option value="EUR">EUR</option>
+                        <option value="FJD">FJD</option>
+                        <option value="GBP">GBP</option>
+                        <option value="GTQ">GTQ</option>
+                        <option value="HKD">HKD</option>
+                        <option value="HRK">HRK</option>
+                        <option value="HUF">HUF</option>
+                        <option value="IDR">IDR</option>
+                        <option value="ILS">ILS</option>
+                        <option value="INR">INR</option>
+                        <option value="ISK">ISK</option>
+                        <option value="JPY">JPY</option>
+                        <option value="KRW">KRW</option>
+                        <option value="KZT">KZT</option>
+                        <option value="MXN">MXN</option>
+                        <option value="MYR">MYR</option>
+                        <option value="NOK">NOK</option>
+                        <option value="NZD">NZD</option>
+                        <option value="PAB">PAB</option>
+                        <option value="PEN">PEN</option>
+                        <option value="PHP">PHP</option>
+                        <option value="PKR">PKR</option>
+                        <option value="PLN">PLN</option>
+                        <option value="PYG">PYG</option>
+                        <option value="RON">RON</option>
+                        <option value="RUB">RUB</option>
+                        <option value="SAR">SAR</option>
+                        <option value="SEK">SEK</option>
+                        <option value="SGD">SGD</option>
+                        <option value="THB">THB</option>
+                        <option value="TRY">TRY</option>
+                        <option value="TWD">TWD</option>
+                        <option value="UAH">UAH</option>
+                        <option value="USD">USD</option>
+                        <option value="UYU">UYU</option>
+                        <option value="VND">VND</option>
+                        <option value="ZAR">ZAR</option>
+                    </select>
+    
+                    <select name="operator" class="inp" required>
+                        <option value="" selected="true" disabled="disabled">Select second currency</option>
+                        <option value="ARS">ARS</option>
+                        <option value="AUD">AUD</option>
+                        <option value="BGN">BGN</option>
+                        <option value="BRL">BRL</option>
+                        <option value="BSD">BSD</option>
+                        <option value="CAD">CAD</option>
+                        <option value="CHF">CHF</option>
+                        <option value="CLP">CLP</option>
+                        <option value="CNY">CNY</option>
+                        <option value="COP">COP</option>
+                        <option value="CZK">CZK</option>
+                        <option value="DKK">DKK</option>
+                        <option value="DOP">DOP</option>
+                        <option value="EGP">EGP</option>
+                        <option value="EUR">EUR</option>
+                        <option value="FJD">FJD</option>
+                        <option value="GBP">GBP</option>
+                        <option value="GTQ">GTQ</option>
+                        <option value="HKD">HKD</option>
+                        <option value="HRK">HRK</option>
+                        <option value="HUF">HUF</option>
+                        <option value="IDR">IDR</option>
+                        <option value="ILS">ILS</option>
+                        <option value="INR">INR</option>
+                        <option value="ISK">ISK</option>
+                        <option value="JPY">JPY</option>
+                        <option value="KRW">KRW</option>
+                        <option value="KZT">KZT</option>
+                        <option value="MXN">MXN</option>
+                        <option value="MYR">MYR</option>
+                        <option value="NOK">NOK</option>
+                        <option value="NZD">NZD</option>
+                        <option value="PAB">PAB</option>
+                        <option value="PEN">PEN</option>
+                        <option value="PHP">PHP</option>
+                        <option value="PKR">PKR</option>
+                        <option value="PLN">PLN</option>
+                        <option value="PYG">PYG</option>
+                        <option value="RON">RON</option>
+                        <option value="RUB">RUB</option>
+                        <option value="SAR">SAR</option>
+                        <option value="SEK">SEK</option>
+                        <option value="SGD">SGD</option>
+                        <option value="THB">THB</option>
+                        <option value="TRY">TRY</option>
+                        <option value="TWD">TWD</option>
+                        <option value="UAH">UAH</option>
+                        <option value="USD">USD</option>
+                        <option value="UYU">UYU</option>
+                        <option value="VND">VND</option>
+                        <option value="ZAR">ZAR</option>
+                    </select>
+                    
+                    <input id="button" type="button" value="Amount in Second Currency" class="inp" onclick="cConverter(3)">
+                    
+                </form>
+                <code class="res">Result</code>
+                <hr>
+            </div>
+        </main>
+
+    </section>
+    
+
+    </body>
+</html>
+

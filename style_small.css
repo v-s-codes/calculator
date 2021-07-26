@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.name {
+    text-decoration: none;
+    font-size: 2rem;
+    letter-spacing: 0.01em;
+    color: rgb(0, 0, 0);
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+.name:hover{
+    color: blue;
+}
+
+.topic{
+    font-size: xx-large;
+}
+
+.content{
+    position: absolute;
+    top: 110px;
+    left: 10%;
+    width: 80%;
+    font-size: large;
+}
+
+.row{
+    margin-top: 5%;
+    display: flex;
+    margin-bottom: 105px;
+    flex-direction: column;
+}
+
+.inp {
+    margin-bottom: 5%;
+}
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+.footer h4{
+    margin: 20px 0 25px 0;
+    font-weight: 600;
+}
+.fa{
+    cursor: pointer;
+}
+.fa:hover {
+    color: blue;
+}
+
+.full-width {
+    display: none;
+    position: absolute;
+    right: 7%;
+    top: 15%;
+}
+
+.fa-bars{
+    position: absolute;
+    right: 10%;
+    top: 30px;
+    font-size: 2rem;
+}
+
+.fa-times{
+    position: absolute;
+    right: 10%;
+    top: 30px;
+    visibility: hidden;
+    font-size: 2rem;
+}
+
+.full-width ul{
+    list-style-type: none;
+}
+
+.full-width ul li a{
+    text-decoration: none;
+    font-size: 170%;
+    margin-left: 5%;
+    /* margin: 5%; */
+    /* padding: 5%; */
+    line-height: 200%;
+    color: black;
+}
+.full-width h1 i{
+    font-size: 170%;
+    line-height: 200%;
+}
+.full-width ul li a:hover{
+    color: blue;
+}
+
+#button{
+    font-size: 15px;
+    background-color: white;
+}
+#button:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+.res {
+    width: 100%;
+    display: none;
+    margin-top: 30px;
+    text-align: center;
+}
+.see-more:hover{
+    color: blue;
+}
+.see-less:hover{
+    color: blue;
+}
+canvas{
+    border: 1px solid black;
+    background-color: rgba(0, 128, 0, 0.1);
+    margin-bottom: 5%;
+}
